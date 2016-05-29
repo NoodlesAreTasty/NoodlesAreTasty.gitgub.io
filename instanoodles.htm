@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<body>
+
+<h1 style="text-align:center;color:white;">Your Noodles will be ready in <span id="countdown">5</span></h1>
+
+<img id="myimage" class="displayed" src="https://sites.google.com/site/thuglifeftw12345/_/rsrc/1448529454894/home/noodlesinsta.jpg" style="display:none" />
+
+
+<!--Background-->
+<style>
+    html {
+  background: url(awesome-wallpapers-bwidescreen.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  backgcursorsize: cover;
+}
+</style>
+
+<!--Countdown-->
+  <script type="text/javascript">
+
+(function () {
+    var timeLeft = 5,
+        cinterval;
+
+    var timeDec = function (){
+        timeLeft--;
+        document.getElementById('countdown').innerHTML = timeLeft;
+        if(timeLeft === 0){
+            clearInterval(cinterval);
+        }
+    };
+
+    cinterval = setInterval(timeDec, 1000);
+})();
+
+</script>
+<!--Image Popout-->
+<script type="text/javascript">
+setTimeout(function(){
+    document.getElementById('myimage').style.display = 'block';
+},5700);
+</script>
+<style>
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+</style>
+
+</body>
+</html>
